@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap');
+
+:root {
+  --primary: #c778dd;
+  --primary-op: hsla(287, 60%, 67%, 0.5);
+  --gray:  #abb2bf;
+  --background: #282c33;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Fira Code', monospace;
+  margin: 2rem 10%;
+  background-color: var(--background);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+h2 {
+  color: white;
+  font-size: 2rem;
+}
+
+.title::before {
+  content: "#";
+  color: var(--primary);
+}
+
+.title::after {
+  content: "----";
+  margin-left: 0.5rem;
+  color: var(--primary);
+}
+
+.project-list {
+  max-width: 100%;
+  display: grid;
+  gap: 2rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(80%, 350px), 1fr));
+}
+
+.project {
+  border: 1px solid var(--gray);
+}
+
+.project__image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-bottom: 1px solid var(--gray);
+}
+
+.project__techs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem 0.75rem;
+  margin: 0;
+  gap: 0.5rem 1rem;
+  list-style: none;
+  color: var(--gray);
+  border-bottom: 1px solid var(--gray);
+}
+
+.project__content {
+  padding: 1.25rem;
+}
+
+.project__name {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.project__description {
+  margin: 1.5rem 0;
+  color: var(--gray);
+}
+
+.project__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+
+
+.button {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--primary-op);
+  color: white;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: var(--primary-op);
+}
+
+@media screen and (max-width: 600px) {
+
+
+  body {
+    font-size: 75%;
+    margin: 2rem 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
